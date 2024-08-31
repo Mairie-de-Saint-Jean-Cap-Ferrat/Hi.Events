@@ -116,7 +116,7 @@
   .sidebar {
     overflow: auto;
     grid-area: sidebar;
-    background: linear-gradient(270deg, var(--tk-primary), #7d5eba);
+    background: linear-gradient(270deg, var(--tk-primary), #287dcc);
     color: var(--tk-color-white);
     scrollbar-width: thin;
     scrollbar-color: var(--tk-secondary) transparent;
@@ -175,13 +175,13 @@
         font-weight: 600;
 
         &.loading {
-          background-color: #4b327d75;
+          background-color: #32527d75;
           width: 90%;
           height: 33px;
         }
 
         &.linkActive, &:hover {
-          background: #4b327d75;
+          background: #32407d75;
           color: var(--tk-color-white);
         }
 
