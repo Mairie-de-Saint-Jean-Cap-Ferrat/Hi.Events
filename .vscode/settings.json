@@ -1,0 +1,8 @@
+{
+    "docker-compose.files": [
+        "docker/all-in-one/docker-compose.yml",
+        "docker/development/docker-compose.dev.yml",
+        "/home/yonix/Dev/Hi.Events/docker/development/docker-compose.dev.yml",
+        "/home/yonix/Dev/Hi.Events/docker/all-in-one/docker-compose.yml"
+    ]
+}
