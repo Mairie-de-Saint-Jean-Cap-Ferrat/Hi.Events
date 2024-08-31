@@ -63,20 +63,20 @@ export const App: FC<
             <MantineProvider
                 theme={{
                     colors: {
-                        purple: [
-                            "#8260C6",
-                            "#734DBF",
-                            "#6741B2",
-                            "#5E3CA1",
-                            "#563792",
-                            "#4E3284",
-                            "#472E78",
-                            "#40296C",
-                            "#392562",
-                            "#332158",
+                        blue: [
+                            "#3487E3",
+                            "#2978C6",
+                            "#256DB9",
+                            "#2163AD",
+                            "#1D579F",
+                            "#175E94",
+                            "#135C89",
+                            "#0F568F",
+                            "#0C4D85",
+                            "#093F7C",
                         ],
                     },
-                    primaryColor: "purple",
+                    primaryColor: "blue",
                     fontFamily: "'Varela Round', sans-serif",
                 }}
             >

@@ -175,13 +175,13 @@
         font-weight: 600;
 
         &.loading {
-          background-color: #4b327d75;
+          background-color: #32527d75;
           width: 90%;
           height: 33px;
         }
 
         &.linkActive, &:hover {
-          background: #4b327d75;
+          background: #32617d75;
           color: var(--tk-color-white);
         }
 
