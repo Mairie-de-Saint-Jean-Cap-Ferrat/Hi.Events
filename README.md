@@ -26,6 +26,8 @@
 
 <hr/>
 
+//TODO: https://docs.github.com/fr/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
+
 ## Table des Matières
 
 - [Introduction](#-introduction)
