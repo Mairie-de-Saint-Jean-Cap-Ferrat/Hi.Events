@@ -4,5 +4,16 @@
         "docker/development/docker-compose.dev.yml",
         "/home/yonix/Dev/Hi.Events/docker/development/docker-compose.dev.yml",
         "/home/yonix/Dev/Hi.Events/docker/all-in-one/docker-compose.yml"
+    ],
+    "DockerRun.DisableDockerrc": true,
+    "DockerRun.Containers": [
+        "7c7abcfb6608",
+        "827f7b1cb3b7",
+        "ac71a6e6b7c4",
+        "12bdceaf985c",
+        "c80c38e068af",
+        "2883d0f5f4bc",
+        "827d4f6d06bf",
+        "3192dbb1756e"
     ]
 }
