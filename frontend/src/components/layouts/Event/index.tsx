@@ -195,7 +195,7 @@ const EventLayout = () => {
                 <div className={classes.logo}>
                     <NavLink to={'/manage/events'}>
                         <img style={{maxWidth: '120px', margin: "20px auto"}}
-                             src={'/logo.svg'} alt={''}/>
+                             src={'/logo-sjcf.png'} alt={''}/>
                     </NavLink>
                 </div>
                 <div className={classes.nav}>
