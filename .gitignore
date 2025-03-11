@@ -5,8 +5,9 @@
 /.idea/**
 frontend/.env
 backend/.env
+docker/.env
 todo.md
-.pnpm-store
+./.pnpm-store
 
 .vercel
-.env
+
