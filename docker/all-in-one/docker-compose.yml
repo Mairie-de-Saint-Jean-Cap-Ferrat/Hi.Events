@@ -34,7 +34,7 @@ services:
       - MAIL_FROM_NAME=${MAIL_FROM_NAME}
       - FILESYSTEM_PUBLIC_DISK=${FILESYSTEM_PUBLIC_DISK}
       - FILESYSTEM_PRIVATE_DISK=${FILESYSTEM_PRIVATE_DISK}
-      - DATABASE_URL=postgresql://postgres:secret@postgres:5432/hi-events
+      - DATABASE_URL=postgresql://postgres:secret@postgres:5432/hievents
       - STRIPE_PUBLIC_KEY=${STRIPE_PUBLIC_KEY}
       - STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
       - STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
@@ -52,7 +52,7 @@ services:
       timeout: 5s
       retries: 5
     environment:
-      POSTGRES_DB: hi-events
+      POSTGRES_DB: hievents
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: secret
     volumes:
