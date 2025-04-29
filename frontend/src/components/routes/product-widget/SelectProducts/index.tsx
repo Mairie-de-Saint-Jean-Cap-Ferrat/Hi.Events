@@ -103,7 +103,10 @@ const SelectProducts = (props: SelectProductsProps) => {
             .then(() => {
                 const url = '/checkout/' + eventId + '/' + data.data.short_id + '/details';
                 if (props.widgetMode === 'embedded') {
-                    window.open(url, '_blank');
+                    window.open(
+                        url + '?session_identifier=' + data.data.session_identifier + '&utm_source=embedded_widget',
+                        '_blank'
+                    );
                     setOrderInProcessOverlayVisible(true);
                     return;
                 }
@@ -280,7 +283,7 @@ const SelectProducts = (props: SelectProductsProps) => {
                             </h4>
                             <Trans>
                                 If a new tab did not open, please {' '}
-                                <a href={'/checkout/' + eventId + '/' + productMutation.data?.data.short_id + '/details'}
+                                <a href={'/checkout/' + eventId + '/' + productMutation.data?.data.short_id + '/details' + '?session_identifier=' + productMutation.data?.data.session_identifier}
                                    target={'_blank'} rel={'noopener noreferrer'}>
                                     <b>{t`click here`}</b>.
                                 </a>

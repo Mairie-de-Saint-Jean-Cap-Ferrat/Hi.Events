@@ -65,6 +65,7 @@ export interface Account {
     currency_code?: string;
     password?: string;
     stripe_connect_setup_complete?: boolean;
+    stripe_account_id?: string;
     is_account_email_confirmed?: boolean;
     is_saas_mode_enabled?: boolean;
     configuration?: AccountConfiguration;
@@ -407,7 +408,7 @@ export interface Attendee {
     check_in?: AttendeeCheckIn;
 }
 
-export type PublicCheckIn = Pick<AttendeeCheckIn, 'id' | 'attendee_id' | 'check_in_list_id' | 'product_id' | 'event_id'>;
+export type PublicCheckIn = Pick<AttendeeCheckIn, 'id' | 'order_id' | 'attendee_id' | 'check_in_list_id' | 'product_id' | 'event_id'>;
 
 export interface AttendeeCheckIn {
     id: IdParam;
@@ -416,6 +417,7 @@ export interface AttendeeCheckIn {
     product_id: IdParam;
     event_id: IdParam;
     short_id: IdParam;
+    order_id: IdParam;
     created_at: string;
 }
 
@@ -473,6 +475,7 @@ export interface Order {
     question_answers?: QuestionAnswer[];
     event?: Event;
     latest_invoice?: Invoice;
+    session_identifier?: string;
 }
 
 export interface Invoice {

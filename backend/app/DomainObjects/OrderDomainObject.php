@@ -11,6 +11,7 @@ use HiEvents\DomainObjects\Status\OrderStatus;
 use HiEvents\Helper\AddressHelper;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
+use RuntimeException;
 
 class OrderDomainObject extends Generated\OrderDomainObjectAbstract implements IsSortable, IsFilterable
 {
@@ -28,6 +29,8 @@ class OrderDomainObject extends Generated\OrderDomainObjectAbstract implements I
     public ?Collection $invoices = null;
 
     public ?EventDomainObject $event = null;
+
+    public ?string $sessionIdentifier = null;
 
     public static function getAllowedFilterFields(): array
     {
@@ -227,6 +230,15 @@ class OrderDomainObject extends Generated\OrderDomainObjectAbstract implements I
         return $this;
     }
 
+    public function getTotalQuantity(): int
+    {
+        if ($this->getOrderItems() === null) {
+            throw new RuntimeException('Cannot calculate total quantity, order items are null');
+        }
+
+        return $this->getOrderItems()->sum(fn(OrderItemDomainObject $item) => $item->getQuantity());
+    }
+
     public function getQuestionAndAnswerViews(): ?Collection
     {
         return $this->questionAndAnswerViews;
@@ -252,5 +264,16 @@ class OrderDomainObject extends Generated\OrderDomainObjectAbstract implements I
     public function getInvoices(): ?Collection
     {
         return $this->invoices;
+    }
+
+    public function setSessionIdentifier(?string $sessionIdentifier): OrderDomainObject
+    {
+        $this->sessionIdentifier = $sessionIdentifier;
+        return $this;
+    }
+
+    public function getSessionIdentifier(): ?string
+    {
+        return $this->sessionIdentifier;
     }
 }
